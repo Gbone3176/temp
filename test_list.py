@@ -1,20 +1,21 @@
-# from flask import Flask, jsonify
 #
-# app = Flask(__name__)
-#
-# @app.route('/users')
-# def get_users():
-#     users = [
-#         {"name": "Alice", "age": 30},
-#         {"name": "Bob", "age": 25},
-#         {"name": "Charlie", "age": 35}
-#     ]
-#     return jsonify(users)  # 将Python对象转换为JSON格式的响应
-#
-# if __name__ == '__main__':
-#     app.run(port=5000, debug=True)
-VIDEO_SUFFIXES = [".mp4", ".avi"]
-data = {'suffix':'abc.jpg'}
-suffix = data.get('suffix')
-isImage = suffix not in VIDEO_SUFFIXES
-print(isImage)
+# None_lst = ['n','m','s','l']
+# join_lst = '\n'.join(None_lst)
+# for item in join_lst:
+#     print(item)
+
+
+def convert_str_to_num(s: str):
+    try:
+        # 尝试转换为整数
+        if s.isdigit():
+            return int(s)
+        # 尝试转换为浮点数
+        return float(s)
+    except ValueError:
+        # 如果转换失败，则返回原始字符串
+        return s
+
+
+print(convert_str_to_num("1.00"))
+print(convert_str_to_num("iamsb"))
